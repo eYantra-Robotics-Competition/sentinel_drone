@@ -1,0 +1,33 @@
+<package>
+  <name>rotors_edrone_interface</name>
+  <version>0.0.1</version>
+  <description>Package to translate eDrone Msg type to the roll pitch yaw controller of RotorS</description>
+
+  <maintainer email="giuseppe.silano@unisannio.it">Giuseppe Silano</maintainer>
+
+  <author>Giuseppe Silano</author>
+
+  <license>ASL 2.0</license>
+
+  <url type="website">https://github.com/gsilano/CrazyS</url>
+  <url type="bugtracker">https://github.com/gsilano/CrazyS/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Dependencies needed to compile this package. -->
+
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>mav_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>trajectory_msgs</build_depend>
+  <build_depend>edrone_client</build_depend>
+
+  <!-- Dependencies needed after this package is compiled. -->
+
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>mav_msgs</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>trajectory_msgs</run_depend>
+  <run_depend>edrone_client</run_depend>
+
+</package>
