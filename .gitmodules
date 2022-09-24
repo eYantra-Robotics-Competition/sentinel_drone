@@ -1,3 +1,6 @@
 [submodule "whycon"]
 	path = whycon
 	url = https://github.com/erts-RnD/whycon
+[submodule "task_1/mav_comm"]
+	path = task_1/mav_comm
+	url = https://github.com/ethz-asl/mav_comm
