@@ -1,0 +1,3 @@
+[submodule "whycon"]
+	path = whycon
+	url = https://github.com/erts-RnD/whycon
