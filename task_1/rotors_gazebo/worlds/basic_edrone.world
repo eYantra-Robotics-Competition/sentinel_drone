@@ -3,6 +3,8 @@
 		<scene>
 	      <shadows>false</shadows>
 	      <grid>false</grid>
+          <origin_visual>false</origin_visual>
+
 	      <sky>
 	        <clouds>
 	          <speed>4</speed>
