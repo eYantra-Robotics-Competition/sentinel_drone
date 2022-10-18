@@ -1,6 +1,14 @@
 <sdf version="1.4">
 	<world name="default">
-
+		<scene>
+	      <shadows>false</shadows>
+	      <grid>false</grid>
+	      <sky>
+	        <clouds>
+	          <speed>4</speed>
+	        </clouds>
+	      </sky>
+	    </scene>   
 		<include>
 			<uri>model://sun</uri>
 		</include>
