@@ -18,9 +18,6 @@ CODE MODULARITY AND TECHNIQUES MENTIONED LIKE THIS WILL HELP YOU GAINING MORE MA
 '''
 
 # Importing the required libraries
-
-from typing_extensions import Self
-from matplotlib.font_manager import MSFolders
 from edrone_client.msg import *
 from geometry_msgs.msg import PoseArray
 from std_msgs.msg import Int16
@@ -256,7 +253,7 @@ class Edrone():
 		self.cmd.rcPitch = int(1500 + err_pid[1])
 		self.cmd.rcThrottle = int(1500 + err_pid[2])
 		# print(self.cmd)
-		if self.cmd.rcRoll>1900:
+		if self.cmd.rcRoll>1900: #integral windup
 			self.cmd.rcRoll = 1900
 		if self.cmd.rcPitch>1900:
 			self.cmd.rcPitch = 1900

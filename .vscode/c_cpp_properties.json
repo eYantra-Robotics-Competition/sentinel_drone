@@ -1,0 +1,38 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/yashas/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/yashas/catkin_ws/src/Universal_Robots_ROS_Driver/controller_stopper/include/**",
+        "/home/yashas/catkin_ws/src/dept_image_proc/include/**",
+        "/home/yashas/catkin_ws/src/eband_local_planner/include/**",
+        "/home/yashas/catkin_ws/src/sentinel_drone/task_1/edrone_client/include/**",
+        "/home/yashas/catkin_ws/src/lane_layer/include/**",
+        "/home/yashas/catkin_ws/src/sentinel_drone/task_1/mav_comm/mav_msgs/include/**",
+        "/home/yashas/catkin_ws/src/sentinel_drone/task_1/mav_comm/mav_planning_msgs/include/**",
+        "/home/yashas/catkin_ws/src/sentinel_drone/task_1/rotors_control/include/**",
+        "/home/yashas/catkin_ws/src/sentinel_drone/task_1/rotors_edrone_interface/include/**",
+        "/home/yashas/catkin_ws/src/sentinel_drone/task_1/rotors_gazebo/include/**",
+        "/home/yashas/catkin_ws/src/sentinel_drone/task_1/rotors_gazebo_plugins/include/**",
+        "/home/yashas/catkin_ws/src/simple_layers/include/**",
+        "/home/yashas/catkin_ws/src/simple_navigation_goals/include/**",
+        "/home/yashas/catkin_ws/src/Universal_Robots_ROS_Driver/ur_calibration/include/**",
+        "/home/yashas/catkin_ws/src/fmauch_universal_robot/ur_kinematics/include/**",
+        "/home/yashas/catkin_ws/src/Universal_Robots_ROS_Driver/ur_robot_driver/include/**",
+        "/home/yashas/catkin_ws/src/sentinel_drone/whycon/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
