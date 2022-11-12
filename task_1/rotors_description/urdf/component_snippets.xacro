@@ -115,6 +115,7 @@
           <distortionT1>0.0</distortionT1>
           <distortionT2>0.0</distortionT2>
         </plugin>
+        <visualize>1</visualize>
       </sensor>
     </gazebo>
   </xacro:macro>

@@ -134,6 +134,18 @@
 				<gravity>1</gravity>
 			</link>
 		</model>
+
+		<include>
+			<uri>model://arena</uri>
+			<pose>0 0 0.001 0 0 0</pose>
+		</include>
+
+		<include>
+			<uri>model://yellow_box</uri>
+			<pose>-1.722885 -1.210398 0 0 0 0</pose>
+		</include>
+
+
 		
 
 		

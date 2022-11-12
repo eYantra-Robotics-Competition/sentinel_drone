@@ -18,5 +18,14 @@
   <url type="bugtracker">https://github.com/ethz-asl/rotors_simulator/issues</url>
 
   <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>gazebo_ros</build_depend>
+  <build_export_depend>gazebo_ros</build_export_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+    <gazebo_ros gazebo_media_path="${prefix}/models"/>
+    <gazebo_ros plugin_path="$(prefix)/lib"/>
+  </export>
 
 </package>

@@ -17,6 +17,13 @@
   <!-- Mount an ADIS16448 IMU. -->
   <xacro:default_imu namespace="${namespace}" parent_link="${namespace}/base_link" />
 
+  <xacro:camera_macro namespace="${namespace}" parent_link="${namespace}/base_link" camera_suffix="rgb" frame_rate="30"
+      horizontal_fov="0.872665" image_width="640" image_height="480" image_format="R8G8B8" min_distance="0.1"
+      max_distance="5" noise_mean="0" noise_stddev="0" enable_visual="false">
+        <box size="0.01 0.01 0.01"/>
+      <origin xyz="0 0 0" rpy="0 1.57 0"/>
+    </xacro:camera_macro>
+ 
   <xacro:if value="$(arg enable_ground_truth)">
     <xacro:ground_truth_imu_and_odometry namespace="${namespace}" parent_link="${namespace}/base_link" />
   </xacro:if>
