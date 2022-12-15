@@ -8,7 +8,7 @@
   <arg name="outer_diameter" default=".55"/>
   <arg name="inner_diameter" default=".20"/>
   <arg name="node_start_delay" default="10.0" />  
-  <arg name="duration" default="120"/>
+  <arg name="duration" default="240"/>
   <arg name="rec_name" default="block_locator.bag"/>
 
   <node name="whycon" type="whycon" pkg="whycon" output="screen">
