@@ -1,25 +1,10 @@
 <launch>
 
-  <arg name="name" default="whycon"/>
-  <arg name="targets" default="1"/>
-  <!-- DO NOT CHANGE THE FOLLOWING TWO VALUES  -->
-  <arg name="outer_diameter" default=".55"/>
-  <arg name="inner_diameter" default=".20"/>
+  <include file="$(find sentinel_drone)/launch/whycon.launch" />
+  <include file="$(find sentinel_drone)/launch/usb_cam-test.launch" />
+  <include file="$(find plotjuggler_ros)/launch/plotjuggler.launch" />
 
-  <arg name="node_start_delay" default="10.0" />  
-  <arg name="duration" default="60"/>
-  <arg name="rec_name" default="controller.bag"/>
-
-  <include file="$(find sentinel_drone)/launch/usb_cam_SD.launch" />
-
-  <node name="whycon" type="whycon" pkg="whycon" output="screen">
-    <param name="targets" value="$(arg targets)"/>
-    <param name="name" value="$(arg name)"/>
-    <param name="outer_diameter" value="$(arg outer_diameter)"/>
-    <param name="inner_diameter" value="$(arg inner_diameter)"/> 
-  </node>
-
-
+  <node name="pid_tune" pkg="pid_tune" type="pid_tune_drone.py" />
   <node ns = "whycon_display" name="image_view" type="image_view" pkg="image_view" output="screen">
     <remap from="image" to="/whycon/image_out"/>
   </node>
@@ -27,7 +12,7 @@
   <node name="rosbag_record_controller" pkg="rosbag" type="record"
        args="record -O $(find sentinel_drone)/scripts/$(arg rec_name) --duration=$(arg duration) --chunksize=10 /whycon/poses" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
 
-  <node pkg="sentinel_drone" type="position_hold.py" name="position_hold" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+  <node pkg="sentinel_drone" type="controller.py" name="position_hold" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
 
 </launch>
 
